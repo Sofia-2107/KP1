@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VOLLA - Румяна Velvet touch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Cards.css">
+</head>
+<body>
+    <header class="header">
+        <a href="Web-side.html" class="logo">VOLLA</a>
+    </header>
+
+    <div class="nav-bar">
+        <button class="burger-btn" id="burgerBtn">☰ Меню</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="Web-side.html">Главная</a></li>
+            <li><a href="Catalog-face.html">Для лица</a></li>
+            <li><a href="Catalog-eyes.html">Для глаз</a></li>
+            <li><a href="Catalog-lips.html">Для губ</a></li>
+            <li><a href="Contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+
+    <div class="product-container">
+        <div class="product-wrapper">
+            <div class="product-gallery">
+                <img src="KarandashLips.jpeg" alt="Карандаш для губ Soft Matte">
+            </div>
+            <div class="product-info">
+                <h1 class="product-title">Карандаш для губ Soft Matte</h1>
+                <div class="product-price">8,99 BYN</div>
+                <div class="product-description">
+                    Мягкий карандаш для губ с матовым финишем. Не сушит и не стягивает нежную кожу губ, легко наносится и растушевывается. Идеально подходит для создания контура или полного покрытия губ.
+                </div>
+                <div class="product-specs">
+                    <p><strong>Вес:</strong> 1,1 г</p>
+                    <p><strong>Стойкость:</strong> 8 часов</p>
+                    <p><strong>Текстура:</strong> Мягкая, кремовая</p>
+                    <p><strong>Оттенок:</strong> Натуральный розово-бежевый</p>
+                </div>
+                <div>
+                    <a href="Catalog-lips.html" class="btn-back">← Назад к каталогу</a>
+                    <a href="Contacts.html" class="btn-cart">В корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- НОВЫЙ ФУТЕР С ИКОНКАМИ FONT AWESOME -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Левая колонка: логотип и соцсети -->
+            <div class="footer-brand">
+                <div class="footer-logo">VOLLA</div>
+                <div class="footer-tagline">cosmetics</div>
+                <div class="social-title">Следите за нами в соц сетях</div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <!-- Средняя колонка: меню -->
+             <div class="footer-menu">
+                <div class="footer-menu-title">О компании</div>
+                <div class="footer-menu-links">
+                    <a href="Contacts.html">Контакты</a>
+                </div>
+            </div>
+            
+            <!-- Правая колонка: интернет-магазин и реквизиты -->
+            <div class="footer-contacts-block">
+                <div class="footer-contacts-title">ИНТЕРНЕТ-МАГАЗИН:</div>
+                <a href="tel:+375297600655" class="footer-phone">+375 25 763 78 83</a>
+                
+                <div class="legal-info">
+                    <p>Владелец интернет-магазина: ООО «ВОЛЛА»</p>
+                    <p>Юр. адрес: г.Минск ул. Свердлова 13А</p>
+                    <p>Режим работы: пн-пт, 9.00-17.00</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© VOLLA. Все права защищены</p>
+        </div>
+    </footer>
+
+    <script>
+
+        const burgerBtn = document.getElementById('burgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (burgerBtn && navMenu) {
+            burgerBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('show');
+            });
+
+            const menuLinks = navMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('show');
+                });
+            });
+        }
+    </script>
+</body>
+</html>

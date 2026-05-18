@@ -1,0 +1,766 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Comic Sans MS, Comic Sans, cursive;
+            background-color: #FFFFFF;
+        }
+
+        /* ШАПКА С ЛОГОТИПОМ */
+        .header {
+            background-color: #000000;
+            padding: 25px 50px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 600;
+            color: #FFFFFF;
+            text-decoration: none;
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+
+        /* МЕНЮ НАВИГАЦИИ */
+        .nav-bar {
+            background-color: #BA55D3;
+            position: relative;
+        }
+
+        /* Кнопка бургер-меню (скрыта на десктопе) */
+        .burger-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            padding: 12px 20px;
+            width: 100%;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .burger-btn:hover {
+            background-color: #9b3db3;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+            display: inline-block;
+            padding: 15px 5px;
+        }
+
+        .nav-menu a:hover {
+            color: #000000;
+        }
+
+        /* === КАРУСЕЛЬ С ИЗОБРАЖЕНИЯМИ === */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            background: linear-gradient(135deg, #FFF5EE 0%, #505050 100%);
+            overflow: hidden;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .slide-overlay h2 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .slide-overlay p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* Стрелки навигации */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 30px;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s;
+            z-index: 10;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .arrow-left {
+            left: 20px;
+        }
+
+        .arrow-right {
+            right: 20px;
+        }
+
+        /* Точки (индикаторы) */
+        .dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: #505050;
+        }
+
+        /* === БЛОК НОВИНКИ === */
+        .new-section {
+            max-width: 1600px;
+            margin: 40px auto 30px;
+            padding: 0 20px;
+            background: transparent;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            display: none;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        /* КАРТОЧКА КАК ССЫЛКА */
+        .category-card {
+            position: relative;
+            width: 420px;
+            height: 420px;
+            border-radius: 30px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #E6E6FA;
+            display: block;
+            text-decoration: none;
+        }
+
+        .category-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .category-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .card-overlay h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .card-overlay p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 340px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* === БЛОК НАШИ НОВОСТИ === */
+        .news-section {
+            background: transparent;
+            padding: 50px 0 60px;
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .news-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .news-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .news-title::after {
+            display: none;
+        }
+
+        .news-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .news-card {
+            background-color: #E6E6FA;
+            border-radius: 25px;
+            overflow: hidden;
+            width: 450px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #D8BFD8;
+        }
+
+        .news-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-color: #BA55D3;
+        }
+
+        .news-image {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover .news-image img {
+            transform: scale(1.05);
+        }
+
+        .news-content {
+            padding: 25px;
+        }
+
+        .news-date {
+            font-size: 13px;
+            color: #9370DB;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .news-content h3 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #2D2D2D;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .news-content p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* ========== НОВЫЙ ФУТЕР ========== */
+        .footer {
+            background-color: #000000;
+            padding: 50px 60px 30px;
+            border-top: 1px solid #333;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        /* Левая колонка - логотип и соцсети */
+        .footer-brand {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            font-weight: 600;
+            color: #FFFFFF;
+            text-decoration: none;
+            letter-spacing: 3px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .footer-tagline {
+            font-size: 12px;
+            color: #AAAAAA;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .social-title {
+            font-size: 14px;
+            color: #CCCCCC;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background-color: #333333;
+            border-radius: 50%;
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background-color: #505050;
+            transform: translateY(-3px);
+        }
+
+        /* Средняя колонка - меню */
+.footer-menu {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-menu-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-menu-links a {
+    text-decoration: none;
+    color: #AAAAAA;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+/* Убираем подчеркивание для всех состояний ссылок */
+.footer-menu-links a:link,
+.footer-menu-links a:visited,
+.footer-menu-links a:hover,
+.footer-menu-links a:active {
+    text-decoration: none;
+}
+
+.footer-menu-links a:hover {
+    color: #505050;
+}
+
+        /* Правая колонка - контакты */
+        .footer-contacts-block {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .footer-contacts-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .footer-phone {
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFFFFF;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .footer-phone:hover {
+            color: #505050;
+        }
+
+        .legal-info {
+            margin-top: 20px;
+        }
+
+        .legal-info p {
+            font-size: 11px;
+            color: #777777;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #333;
+        }
+
+        .copyright p {
+            font-size: 11px;
+            color: #666666;
+        }
+
+        /* ========== АДАПТАЦИЯ ========== */
+        
+        /* Планшеты и мобильные устройства (до 1024px) - карточки вертикально */
+        @media (max-width: 1024px) {
+            .categories {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            
+            .category-card {
+                width: 380px;
+                height: 380px;
+            }
+            
+            .news-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 35px;
+            }
+            
+            .news-card {
+                width: 420px;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .footer-brand, .footer-menu, .footer-contacts-block {
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .footer-menu-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            
+            .footer-menu-links li {
+                margin-bottom: 0;
+            }
+        }
+        
+        /* Мобильные устройства (до 768px) - выпадающее меню */
+        @media (max-width: 768px) {
+            /* Шапка */
+            .header {
+                padding: 18px 30px;
+            }
+            
+            .logo {
+                font-size: 26px;
+            }
+            
+            /* ВЫПАДАЮЩЕЕ МЕНЮ */
+            .burger-btn {
+                display: block;
+            }
+            
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .nav-menu.show {
+                display: flex;
+            }
+            
+            .nav-menu a {
+                padding: 12px 20px;
+                display: block;
+                text-align: center;
+                border-top: 1px solid rgba(255,255,255,0.2);
+            }
+            
+            /* Карусель */
+            .carousel-container {
+                height: 50vh;
+            }
+            
+            .arrow {
+                font-size: 20px;
+                padding: 8px 14px;
+            }
+            
+            .slide-overlay {
+                padding: 30px 20px 20px;
+            }
+            
+            .slide-overlay h2 {
+                font-size: 28px;
+            }
+            
+            .slide-overlay p {
+                font-size: 14px;
+            }
+            
+            /* Заголовки */
+            .section-title, .news-title {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+            
+            /* Карточки новинок */
+            .category-card {
+                width: 100%;
+                max-width: 350px;
+                height: 350px;
+            }
+            
+            .card-overlay h3 {
+                font-size: 22px;
+            }
+            
+            .card-overlay p {
+                font-size: 13px;
+            }
+            
+            /* Карточки новостей */
+            .news-card {
+                width: 100%;
+                max-width: 420px;
+            }
+            
+            .news-image {
+                height: 200px;
+            }
+            
+            .news-content h3 {
+                font-size: 18px;
+            }
+            
+            .news-content p {
+                font-size: 13px;
+            }
+            
+            /* Футер */
+            .footer {
+                padding: 40px 30px 25px;
+            }
+            
+            .footer-nav {
+                gap: 25px;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-contacts {
+                gap: 15px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        
+        /* Маленькие телефоны (до 480px) */
+        @media (max-width: 480px) {
+            .carousel-container {
+                height: 40vh;
+            }
+            
+            .slide-overlay {
+                padding: 20px 15px 15px;
+            }
+            
+            .slide-overlay h2 {
+                font-size: 20px;
+            }
+            
+            .slide-overlay p {
+                font-size: 11px;
+            }
+            
+            .arrow {
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+            
+            .category-card {
+                max-width: 300px;
+                height: 300px;
+            }
+            
+            .card-overlay {
+                padding: 20px;
+            }
+            
+            .card-overlay h3 {
+                font-size: 18px;
+            }
+            
+            .card-overlay p {
+                font-size: 11px;
+            }
+            
+            .news-card {
+                max-width: 100%;
+            }
+            
+            .news-image {
+                height: 180px;
+            }
+            
+            .news-content {
+                padding: 18px;
+            }
+            
+            .footer-menu-links {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            
+            .social-link {
+                width: 32px;
+                height: 32px;
+                font-size: 14px;
+            }
+        }
+        
+        /* Очень широкие экраны (от 1600px) */
+        @media (min-width: 1600px) {
+            .category-card {
+                width: 480px;
+                height: 480px;
+            }
+            
+            .news-card {
+                width: 500px;
+            }
+            
+            .news-image {
+                height: 260px;
+            }
+        }
