@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-color: #FFFFFF;
+}
+
+/* Шапка с логотипом */
+.header {
+    background-color: #000000;
+    padding: 25px 50px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+/* Меню навигации  */
+.nav-bar {
+    background-color: #BA55D3;
+    position: relative;
+}
+
+.burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 12px 20px;
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.burger-btn:hover {
+    background-color: #9b3db3;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+    display: inline-block;
+    padding: 15px 5px;
+}
+
+.nav-menu a:hover {
+    color: #000000;
+}
+
+.contacts-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Заголовок страницы */
+.page-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin-bottom: 20px;
+}
+
+/* Блок связи и формы */
+.contacts-wrapper {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.form-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: #E6E6FA;
+    border-radius: 25px;
+    padding: 35px;
+    border: 1px solid #D8BFD8;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+.form-section:hover {
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    border-color: #BA55D3;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #BA55D3;
+    display: inline-block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2D2D2D;
+    margin-bottom: 8px;
+}
+
+.form-group label span {
+    color: #BA55D3;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #D8BFD8;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: #FFFFFF;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #BA55D3;
+    box-shadow: 0 0 0 3px rgba(186, 85, 211, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit {
+    background-color: #BA55D3;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #9b3db3;
+}
+
+.info-section {
+    flex: 0.7;
+    min-width: 280px;
+}
+
+.support-card {
+    background-color: #E6E6FA;
+    border-radius: 25px;
+    padding: 40px 35px;
+    border: 1px solid #D8BFD8;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.support-card:hover {
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+    border-color: #BA55D3;
+}
+
+.support-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.support-title span {
+    font-size: 34px;
+}
+
+.support-phone {
+    font-size: 32px;
+    font-weight: 700;
+    color: #BA55D3;
+    margin-bottom: 25px;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    word-break: break-word;
+}
+
+.support-phone:hover {
+    color: #9b3db3;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2D2D2D;
+    margin: 25px 0 15px;
+    padding-top: 20px;
+    border-top: 1px solid #D8BFD8;
+}
+
+.company-address {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.company-email {
+    font-size: 16px;
+    color: #BA55D3;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+    word-break: break-word;
+}
+
+.company-email:hover {
+    text-decoration: underline;
+    color: #9b3db3;
+}
+
+/* Футер */
+.footer {
+    background-color: #000000;
+    padding: 50px 60px 30px;
+    border-top: 1px solid #333;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    font-size: 32px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 3px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.footer-tagline {
+    font-size: 12px;
+    color: #AAAAAA;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.social-title {
+    font-size: 14px;
+    color: #CCCCCC;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: #333333;
+    border-radius: 50%;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #505050;
+    transform: translateY(-3px);
+}
+
+.footer-menu {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-menu-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-menu-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu-links li {
+    margin-bottom: 12px;
+}
+
+.footer-menu-links a {
+    text-decoration: none;
+    color: #AAAAAA;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-menu-links a:hover {
+    color: #505050;
+}
+
+.footer-contacts-block {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-contacts-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.footer-phone {
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.footer-phone:hover {
+    color: #505050;
+}
+
+.legal-info {
+    margin-top: 20px;
+}
+
+.legal-info p {
+    font-size: 11px;
+    color: #777777;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    margin-top: 30px;
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid #333;
+}
+
+.copyright p {
+    font-size: 11px;
+    color: #666666;
+}
+
+/* Адаптация */
+@media (max-width: 1024px) {
+    .contacts-wrapper {
+        gap: 35px;
+    }
+    
+    .form-section, .support-card {
+        padding: 30px;
+    }
+    
+    .support-phone {
+        font-size: 28px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-brand, .footer-menu, .footer-contacts-block {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-menu-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .footer-menu-links li {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 18px 30px;
+    }
+    
+    .logo {
+        font-size: 26px;
+    }
+    
+    .burger-btn {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-menu.show {
+        display: flex;
+    }
+    
+    .nav-menu a {
+        padding: 12px 20px;
+        display: block;
+        text-align: center;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .page-title {
+        font-size: 36px;
+    }
+    
+    .contacts-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .form-section, .support-card {
+        padding: 25px;
+    }
+    
+    .form-title {
+        font-size: 24px;
+    }
+    
+    .form-subtitle {
+        font-size: 13px;
+    }
+    
+    .support-title {
+        font-size: 22px;
+    }
+    
+    .support-title span {
+        font-size: 28px;
+    }
+    
+    .support-phone {
+        font-size: 24px;
+    }
+    
+    .company-name {
+        font-size: 18px;
+    }
+    
+    .company-address {
+        font-size: 14px;
+    }
+    
+    .footer {
+        padding: 40px 30px 25px;
+    }
+    
+    .footer-phone {
+        font-size: 18px;
+    }
+    
+    .legal-info p {
+        font-size: 10px;
+    }
+    
+    .footer-menu-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 28px;
+    }
+    
+    .contacts-container {
+        margin: 30px auto;
+    }
+    
+    .form-section, .support-card {
+        padding: 20px;
+    }
+    
+    .form-title {
+        font-size: 22px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    .btn-submit {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .support-title {
+        font-size: 20px;
+    }
+    
+    .support-title span {
+        font-size: 24px;
+    }
+    
+    .support-phone {
+        font-size: 20px;
+    }
+    
+    .company-name {
+        font-size: 16px;
+    }
+    
+    .company-address {
+        font-size: 12px;
+    }
+    
+    .company-email {
+        font-size: 14px;
+    }
+    
+    .social-link {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+}

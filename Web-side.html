@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VOLLA - Косметика</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <!-- Подключение Font Awesome для иконок соцсетей -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Web-side.css">
+</head>
+<body>
+    <!-- ЛОоготип -->
+    <header class="header">
+        <a href="Web-side.html" class="logo">VOLLA</a>
+    </header>
+
+    <!-- Меню навигации -->
+    <div class="nav-bar">
+        <button class="burger-btn" id="burgerBtn">☰ Меню</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="Web-side.html">Главная</a></li>
+            <li><a href="Catalog-face.html">Для лица</a></li>
+            <li><a href="Catalog-eyes.html">Для глаз</a></li>
+            <li><a href="Catalog-lips.html">Для губ</a></li>
+            <li><a href="Contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+
+    <!-- Карусель -->
+    <div class="carousel-container">
+        <div class="carousel-slides" id="carouselSlides">
+            <div class="slide">
+                <img src="Carusel.jpg" alt="Косметика">
+                <div class="slide-overlay">
+                    <h2>WELCOME</h2>
+                    <p>Натуральная косметика для естественной красоты</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Carusel2.jpg" alt="Новинки косметики">
+                <div class="slide-overlay">
+                    <h2>БЕСПЛАТНАЯ ДОСТАВКА</h2>
+                    <p>При заказе от 50 рублей доставка бесплатно</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Carusel3.jpg" alt="Скидки">
+                <div class="slide-overlay">
+                    <h2>СКИДКИ</h2>
+                    <p>Успей приобрести любимые средства со скидкой</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Carusel4.jpg" alt="Доставка">
+                <div class="slide-overlay">
+                    <h2>НОВИНКИ</h2>
+                    <p>Свежие поступления косметики уже в каталоге</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="Carusel5.jpg" alt="Новая коллекция">
+                <div class="slide-overlay">
+                    <h2>НОВАЯ КОЛЛЕКЦИЯ</h2>
+                    <p>Весенние оттенки для идеального образа</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="arrow arrow-left" id="prevBtn">‹</button>
+        <button class="arrow arrow-right" id="nextBtn">›</button>
+        <div class="dots" id="dots"></div>
+    </div>
+
+    <!-- Блок новинок -->
+    <section class="new-section">
+        <h2 class="section-title">Новинки</h2>
+        <div class="categories">
+            <a href="Catalog-face.html" class="category-card">
+                <img src="Catalog1.jpg" alt="Новинки для лица">
+                <div class="card-overlay">
+                    <h3>Новинки для лица</h3>
+                    <p>Тональные средства, румяна, хайлайтеры для сияющей кожи</p>
+                </div>
+            </a>
+            <a href="Catalog-eyes.html" class="category-card">
+                <img src="Catalog2.jpg" alt="Новинки для глаз">
+                <div class="card-overlay">
+                    <h3>Новинки для глаз</h3>
+                    <p>Тени, подводки, туши для создания идеального макияжа глаз</p>
+                </div>
+            </a>
+            <a href="Catalog-lips.html" class="category-card">
+                <img src="Catalog3.jpg" alt="Новинки для губ">
+                <div class="card-overlay">
+                    <h3>Новинки для губ</h3>
+                    <p>Помады, блески, карандаши для соблазнительных губ</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Блок наши новинок -->
+    <section class="news-section">
+        <div class="news-container">
+            <h2 class="news-title">Наши новости</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="News.jpg" alt="Тренды макияжа 2026">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">МАРТ 2026</div>
+                        <h3>Успевать за трендами в 2026 году</h3>
+                        <p>Успевать за трендами в 2026 году порой кажется невозможным. 
+                            Давайте будем реалистами и вспомним, сколько reels с быстрыми make-up трендами 
+                            мы добавили в "сохраненное" и так и не повторили: макияж русской куклы, топ-модели 90-х, 
+                            жены бандита?  Предлагаем вам вспомнить самый универсальный макияж весны, который подчеркнет 
+                            красоту каждой: холеная голливудская кожа и эффект распахнутого взгляда.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="News2.jpg" alt="Открытие магазинов">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">ФЕВРАЛЬ 2026</div>
+                        <h3>Открытие двух новых магазинов в Минске</h3>
+                        <p>В феврале 2026 года состоялось открытие сразу двух новых фирменных магазинов бренда RELOUIS в Минске! 
+                            Новые beauty-локации города Минск расположены в популярных торговых центрах: Авиа Молл и Першы Нацыянальны гандлёвы дом.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-image">
+                        <img src="News3.jpg" alt="Чистый макияж">
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">ЯНВАРЬ 2026</div>
+                        <h3>«Чистый макияж» выходит на новый уровень — минимализм с акцентом на кожу</h3>
+                        <p>Тренд clean makeup развивается: теперь акцент на здоровой коже, а не на декоративных продуктах.
+                            Визажисты используют минимум тона, лёгкие кремовые текстуры и натуральные оттенки.
+                            Главная идея — «я так проснулась, только лучше».</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">VOLLA</div>
+                <div class="footer-tagline">cosmetics</div>
+                <div class="social-title">Следите за нами в соц сетях</div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/sofiaa_.95/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://vk.com/sdshiman" class="social-link"><i class="fab fa-vk"></i></a>
+                    <a href="https://www.youtube.com/@sofiashiman3998" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="https://t.me/sdshiman" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.tiktok.com/" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+             <div class="footer-menu">
+                <div class="footer-menu-title">О компании</div>
+                <div class="footer-menu-links">
+                    <a href="Contacts.html">Контакты</a>
+                </div>
+            </div>
+
+            <div class="footer-contacts-block">
+                <div class="footer-contacts-title">ИНТЕРНЕТ-МАГАЗИН:</div>
+                <a href="tel:+375257637883" class="footer-phone">+375 25 763 78 83</a>
+                
+                <div class="legal-info">
+                    <p>Владелец интернет-магазина: ООО «ВОЛЛА»</p>
+                    <p>Юр. адрес: г.Минск ул. Свердлова 13А</p>
+                    <p>Режим работы: пн-пт, 9.00-17.00</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© VOLLA. Все права защищены</p>
+        </div>
+    </footer>
+
+    <script>
+        // Карусель
+        const slides = document.querySelectorAll('.slide');
+        const slidesContainer = document.getElementById('carouselSlides');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dotsContainer = document.getElementById('dots');
+        
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function createDots() {
+            dotsContainer.innerHTML = '';
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === currentIndex) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+        }
+
+        let autoSlide = setInterval(nextSlide, 5000);
+
+        const carousel = document.querySelector('.carousel-container');
+        carousel.addEventListener('mouseenter', () => clearInterval(autoSlide));
+        carousel.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(nextSlide, 5000);
+        });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            clearInterval(autoSlide);
+            autoSlide = setInterval(nextSlide, 5000);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            clearInterval(autoSlide);
+            autoSlide = setInterval(nextSlide, 5000);
+        });
+
+        createDots();
+        goToSlide(0);
+
+        // Выпадающее меню
+        const burgerBtn = document.getElementById('burgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        burgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+
+        const menuLinks = navMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
+    </script>
+</body>
+</html>

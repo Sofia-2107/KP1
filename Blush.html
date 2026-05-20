@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VOLLA - Румяна Velvet touch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Cards.css">
+</head>
+<body>
+    <header class="header">
+        <a href="Web-side.html" class="logo">VOLLA</a>
+    </header>
+
+    <div class="nav-bar">
+        <button class="burger-btn" id="burgerBtn">☰ Меню</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="Web-side.html">Главная</a></li>
+            <li><a href="Catalog-face.html">Для лица</a></li>
+            <li><a href="Catalog-eyes.html">Для глаз</a></li>
+            <li><a href="Catalog-lips.html">Для губ</a></li>
+            <li><a href="Contacts.html">Контакты</a></li>
+        </ul>
+    </div>
+
+    <div class="product-container">
+        <div class="product-wrapper">
+            <div class="product-gallery">
+                <img src="Catalog1.jpg" alt="Румяна Velvet touch">
+            </div>
+            <div class="product-info">
+                <h1 class="product-title">Румяна Velvet touch</h1>
+                <div class="product-price">13,49 BYN</div>
+                <div class="product-description">
+                    Румяна с шелковистой текстурой и шиммерным сиянием. Создают естественный румянец и здоровое сияние кожи. Легко растушевываются и наслаиваются для достижения желаемой интенсивности.
+                </div>
+                <div class="product-specs">
+                    <p><strong>Вес:</strong> 4,5 г</p>
+                    <p><strong>Финиш:</strong> Шиммерный</p>
+                    <p><strong>Способ нанесения:</strong> Кисть, подушечки пальцев</p>
+                    <p><strong>Оттенок:</strong> Нежно-розовый с золотистым шиммером</p>
+                </div>
+                <div>
+                    <a href="Catalog-face.html" class="btn-back">← Назад к каталогу</a>
+                    <a href="Contacts.html" class="btn-cart">В корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="footer-logo">VOLLA</div>
+                <div class="footer-tagline">cosmetics</div>
+                <div class="social-title">Следите за нами в соц сетях</div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/sofiaa_.95/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://vk.com/sdshiman" class="social-link"><i class="fab fa-vk"></i></a>
+                    <a href="https://www.youtube.com/@sofiashiman3998" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="https://t.me/sdshiman" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="https://www.tiktok.com/" class="social-link"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+             <div class="footer-menu">
+                <div class="footer-menu-title">О компании</div>
+                <div class="footer-menu-links">
+                    <a href="Contacts.html">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="footer-contacts-block">
+                <div class="footer-contacts-title">ИНТЕРНЕТ-МАГАЗИН:</div>
+                <a href="tel:+375257637883" class="footer-phone">+375 25 763 78 83</a>
+                
+                <div class="legal-info">
+                    <p>Владелец интернет-магазина: ООО «ВОЛЛА»</p>
+                    <p>Юр. адрес: г.Минск ул. Свердлова 13А</p>
+                    <p>Режим работы: пн-пт, 9.00-17.00</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© VOLLA. Все права защищены</p>
+        </div>
+    </footer>
+
+    <script>
+
+        const burgerBtn = document.getElementById('burgerBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (burgerBtn && navMenu) {
+            burgerBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('show');
+            });
+
+            const menuLinks = navMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('show');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
